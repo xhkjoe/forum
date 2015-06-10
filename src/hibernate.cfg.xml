@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+        "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd"
+>
+<hibernate-configuration>
+<session-factory>
+	<!-- 
+		数据库的用户名
+	-->
+	<property name="connection.username">root</property>
+	<!-- 
+		密码
+	-->
+	<property name="connection.password">08123532</property>
+	<!-- 
+		url
+	-->
+	<property name="connection.url">
+		jdbc:mysql://localhost:3306/forum?characterEncoding=utf8
+	</property>
+
+	<!-- 
+		方言
+		告诉hibernate,要操作的数据库是mysql
+	-->
+	<property name="dialect">
+		org.hibernate.dialect.MySQLDialect
+	</property>
+
+	<!-- 
+		导入驱动
+	-->
+	<property name="connection.driver_class">
+		com.mysql.jdbc.Driver
+	</property>
+
+	<!-- 
+		validate
+		只检查结构
+		update
+		检查结构，更新或者创建表
+		create
+		每次启动hibernate时，都要创建表
+		create-drop
+		启动hibernate时创建表，当hibernate关闭时，删除表
+		
+			<property name="format_sql">true</property>
+		
+	-->
+	<property name="hbm2ddl.auto">update</property>
+<property name="current_session_context_class">thread</property>
+	
+	<property name="show_sql">true</property>
+
+	<mapping resource="com/forum/model/Chat.hbm.xml" />
+	<mapping resource="com/forum/model/ChatComment.hbm.xml" />
+	<mapping resource="com/forum/model/Collect.hbm.xml" />
+	<mapping resource="com/forum/model/Focus.hbm.xml" />
+	<mapping resource="com/forum/model/MAgent.hbm.xml" />
+	<mapping resource="com/forum/model/MakeComment.hbm.xml" />
+	<mapping resource="com/forum/model/MakeFrends.hbm.xml" />
+	<mapping resource="com/forum/model/Manager.hbm.xml" />
+	<mapping resource="com/forum/model/MMessage.hbm.xml" />
+	<mapping resource="com/forum/model/MobComment.hbm.xml" />
+	<mapping resource="com/forum/model/Mobile.hbm.xml" />
+	<mapping resource="com/forum/model/Module.hbm.xml" />
+	<mapping resource="com/forum/model/News.hbm.xml" />
+	<mapping resource="com/forum/model/NewsComment.hbm.xml" />
+	<mapping resource="com/forum/model/Power.hbm.xml" />
+	<mapping resource="com/forum/model/Publish.hbm.xml" />
+	<mapping resource="com/forum/model/ReComment.hbm.xml" />
+	<mapping resource="com/forum/model/Relaxation.hbm.xml" />
+	<mapping resource="com/forum/model/SecComment.hbm.xml" />
+	<mapping resource="com/forum/model/SecondHand.hbm.xml" />
+	<mapping resource="com/forum/model/ShComment.hbm.xml" />
+	<mapping resource="com/forum/model/Shopping.hbm.xml" />
+	<mapping resource="com/forum/model/SpiComment.hbm.xml" />
+	<mapping resource="com/forum/model/Spitslot.hbm.xml" />
+	<mapping resource="com/forum/model/TecComment.hbm.xml" />
+	<mapping resource="com/forum/model/Technology.hbm.xml" />
+	<mapping resource="com/forum/model/TimComment.hbm.xml" />
+	<mapping resource="com/forum/model/Timely.hbm.xml" />
+	<mapping resource="com/forum/model/Umessage.hbm.xml" />
+	<mapping resource="com/forum/model/User.hbm.xml" />
+	<mapping resource="com/forum/model/WelComment.hbm.xml" />
+	<mapping resource="com/forum/model/Welfare.hbm.xml" />
+	
+
+
+</session-factory>
+</hibernate-configuration>
